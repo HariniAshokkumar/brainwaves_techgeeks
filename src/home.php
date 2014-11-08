@@ -1,8 +1,8 @@
 <?php
-    session_start();
+session_start();
 if ( $_SESSION['login'] != 1)
      header( 'Location: index.php' ) ;
- include("conf/config.php");
+      include("conf/config.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +28,11 @@ if ( $_SESSION['login'] != 1)
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-      
+      <ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#">Account Summary</a></li>
+          <!--display the below only if the account is child account-->
+  <li role="presentation"><a href="#">Manage Child Accounts</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul>
   </body>
 </html>

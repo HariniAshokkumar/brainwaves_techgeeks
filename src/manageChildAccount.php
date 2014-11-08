@@ -1,3 +1,10 @@
+<?php
+    session_start();
+     if ( $_SESSION['login'] != 1)
+     header( 'Location: index.php' ) ;
+      include("conf/config.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,8 +30,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
       <ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#">Account Details</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Account Summary</a></li>
+  <li role="presentation" class="active"><a href="#">Manage Child Accounts</a></li>
   <li role="presentation"><a href="#">Messages</a></li>
 </ul>
   </body>
